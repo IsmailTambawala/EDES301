@@ -215,7 +215,7 @@ class Button():
         #   of the class (i.e. we are executing the while loop while the 
         #   button is being pressed)
         #
-        while GPIO.input(self.pin) == self.pressed_value:
+        while GPIO.input(self.pin) == self.pressed_value
         
             if self.pressed_callback is not None:
                 self.pressed_callback_value = self.pressed_callback()
