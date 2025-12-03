@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+websockets
+numpy
+smbus2
+Adafruit-BBIO
