@@ -1,6 +1,6 @@
 # ACL Rehab Tracker
 
-This guide walks a new operator through setting up and running the ACL Rehab Tracker system: a PocketBeagle-based backend that streams IMU + MyoWare data, and a React frontend that visualizes live knee movement and muscle activation.
+This guide walks a new operator through setting up and running the ACL Rehab Tracker system: a PocketBeagle-based backend that streams IMU + MyoWare data, and a React frontend that visualizes live knee movement and muscle activation. For a complete guide on the hardware for this project refer to the hackster page.
 
 ---
 
@@ -22,7 +22,7 @@ This guide walks a new operator through setting up and running the ACL Rehab Tra
 1. SSH into the PocketBeagle (`ssh debian@192.168.7.2`).
 2. Clone this repository:
    ```bash
-   git clone https://github.com/<your-org>/ACL-Rehab-Tracker-Codebase.git
+   git clone ...
    ```
 3. Keep only the backend on the device:
    ```bash
@@ -40,7 +40,7 @@ This guide walks a new operator through setting up and running the ACL Rehab Tra
 The backend requires Python 3 and the packages listed in `requirements.txt`. Install them once:
 
 ```bash
-python3 -m pip install --user -r requirements.txt
+sudo python3 -m pip install -r requirements.txt
 ```
 
 (If you prefer a virtual environment, activate it before running the command.)
