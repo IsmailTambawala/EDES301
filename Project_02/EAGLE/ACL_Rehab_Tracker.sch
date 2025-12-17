@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1337,7 +1337,6 @@ Sizes: 0402, 0603 &amp; 0805</description>
 <part name="SUPPLY2" library="Project_02_EDES_301" deviceset="VDD_3P3V" device=""/>
 <part name="SUPPLY4" library="Project_02_EDES_301" deviceset="VDD_3P3V" device=""/>
 <part name="GND3" library="Project_02_EDES_301" deviceset="GND" device=""/>
-<part name="GND4" library="Project_02_EDES_301" deviceset="GND" device=""/>
 <part name="GND5" library="Project_02_EDES_301" deviceset="GND" device=""/>
 <part name="FUD1" library="Project_02_EDES_301" deviceset="FIDUCIAL" device=""/>
 <part name="FUD2" library="Project_02_EDES_301" deviceset="FIDUCIAL" device=""/>
@@ -1422,9 +1421,6 @@ Sizes: 0402, 0603 &amp; 0805</description>
 <instance part="GND3" gate="1" x="203.2" y="116.84" smashed="yes" rot="R180">
 <attribute name="VALUE" x="205.74" y="119.38" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND4" gate="1" x="35.56" y="142.24" smashed="yes">
-<attribute name="VALUE" x="33.02" y="139.7" size="1.778" layer="96"/>
-</instance>
 <instance part="GND5" gate="1" x="185.42" y="180.34" smashed="yes">
 <attribute name="VALUE" x="182.88" y="177.8" size="1.778" layer="96"/>
 </instance>
@@ -1469,6 +1465,7 @@ Sizes: 0402, 0603 &amp; 0805</description>
 <pinref part="SUPPLY2" gate="G$1" pin="VDD_3P3V"/>
 <wire x1="111.76" y1="198.12" x2="124.46" y2="198.12" width="0.1524" layer="91"/>
 <wire x1="124.46" y1="198.12" x2="124.46" y2="213.36" width="0.1524" layer="91"/>
+<label x="127" y="200.66" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="VDD"/>
@@ -1506,21 +1503,9 @@ Sizes: 0402, 0603 &amp; 0805</description>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
-<pinref part="U1" gate="G$1" pin="GND@4"/>
-<wire x1="127" y1="144.78" x2="111.76" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="GND@2"/>
 <wire x1="111.76" y1="147.32" x2="127" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="127" y1="147.32" x2="127" y2="144.78" width="0.1524" layer="91"/>
-<junction x="127" y="144.78"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="GND@5"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="50.8" y1="144.78" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
-<pinref part="U1" gate="G$1" pin="GND@3"/>
-<wire x1="50.8" y1="147.32" x2="35.56" y2="147.32" width="0.1524" layer="91"/>
-<wire x1="35.56" y1="147.32" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
-<junction x="35.56" y="144.78"/>
 </segment>
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
@@ -1645,6 +1630,20 @@ Sizes: 0402, 0603 &amp; 0805</description>
 <pinref part="R3" gate="G$1" pin="2"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VOUT@2"/>
+<wire x1="111.76" y1="200.66" x2="116.84" y2="200.66" width="0.1524" layer="91"/>
+<label x="116.84" y="200.66" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="VOUT@1"/>
+<wire x1="50.8" y1="200.66" x2="43.18" y2="200.66" width="0.1524" layer="91"/>
+<label x="43.18" y="200.66" size="1.778" layer="95"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -1658,8 +1657,6 @@ Sizes: 0402, 0603 &amp; 0805</description>
 <approved hash="202,1,50.8,60.96,U1,AIN4(1.8V),,,,"/>
 <approved hash="104,1,111.76,198.12,U1,3.3V,VDD_3P3V,,,"/>
 <approved hash="202,1,50.8,76.2,U1,AIN.VREF+,,,,"/>
-<approved hash="204,1,50.8,200.66,U1,VOUT,,,,"/>
-<approved hash="204,1,111.76,200.66,U1,VOUT,,,,"/>
 <approved hash="204,1,50.8,198.12,U1,3.3V,,,,"/>
 <approved hash="202,1,50.8,127,U1,PWR.BTN,,,,"/>
 <approved hash="204,1,50.8,116.84,U1,BAT.VIN,,,,"/>
